@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Formerly</title>
+    <meta name="description" content="Privacy policy for Formerly - Make Animated Videos with Text, Shapes, and Media">
+    <link rel="icon" type="image/png" href="/Images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Work+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <nav class="container navbar-inner">
+            <a href="/" class="logo">
+                <img src="logo.svg" alt="Formerly Logo">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-links">
+                <a href="/#how-it-works" class="nav-link">How It Works</a>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="/" class="btn-primary">Join the beta</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <svg class="menu-icon" id="menuIcon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg class="close-icon hidden" id="closeIcon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden" id="mobileMenu">
+            <div class="container mobile-menu-inner">
+                <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
+                <div class="mobile-menu-buttons">
+                    <a href="/" class="btn-primary">Join the beta</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="privacy-section">
+            <div class="container">
+                <div class="privacy-content" style="max-width: 800px; margin: 0 auto; padding: 120px 0;">
+                    <h1 style="margin-bottom: 2rem;">Privacy Policy</h1>
+
+                    <p style="margin-bottom: 1.5rem;">Formerly respects your privacy.</p>
+
+                    <p style="margin-bottom: 1.5rem;">When you sign up for early access, we collect your email address
+                        and any information you voluntarily provide through our forms. This information is used only to
+                        notify you about product updates, beta access, and the launch of Formerly.</p>
+
+                    <p style="margin-bottom: 1.5rem;">We do not sell, rent, or share your personal information with
+                        third parties. Your data is stored securely using trusted third-party services (such as Google
+                        Forms and Google Sheets).</p>
+
+                    <p style="margin-bottom: 1.5rem;">You may request to have your information removed at any time by
+                        contacting us at <a href="mailto:formerly.app@gmail.com"
+                            style="color: var(--primary-color);">formerly.app@gmail.com</a>.</p>
+
+                    <p style="margin-bottom: 1.5rem;">This privacy policy may be updated as the product evolves.</p>
+
+                    <p style="margin-top: 2rem; color: #666;">Last updated: January 5, 2026</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <!-- Logo -->
+            <a href="/" class="logo">
+                <img src="logo.svg" alt="Formerly Logo">
+            </a>
+
+            <!-- Links -->
+            <nav class="footer-links">
+                <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a>
+                <a href="/" class="footer-link">Join the beta</a>
+            </nav>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                © <span id="currentYear"></span> Formerly. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
