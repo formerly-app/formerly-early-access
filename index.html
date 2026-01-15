@@ -89,16 +89,12 @@
 
           <!-- Main Headline -->
           <h1 class="hero-title animate-fade-up-delay-1">
-            Make animated videos using
-            <span class="text-primary">Text</span>,
-            <span class="text-primary">Shapes</span>, and
-            <span class="text-primary">Media</span>
+            Animate by connecting <span class="text-primary">frames</span>
           </h1>
 
           <!-- Subheadline -->
           <p class="hero-subtitle animate-fade-up-delay-2">
-            Create motion design videos with a fast, frame-based web editor. No downloads. No timelines. Just smooth
-            motion.
+            Design motion using simple start and end frames, with smooth transitions in between.
           </p>
 
           <!-- CTA Buttons -->
@@ -159,38 +155,47 @@
                 </div>
               </div>
 
-              <!-- Center Canvas -->
+              <!-- Center Canvas (Flow View) -->
               <div class="editor-canvas-container">
-                <div class="canvas">
-                  <!-- Animated elements -->
-                  <div class="canvas-element text-element animate-float">Hello World</div>
-                  <div class="canvas-element circle-element animate-float" style="animation-delay: 1s;"></div>
-                  <div class="canvas-element square-element animate-float" style="animation-delay: 2s;"></div>
+                <div class="canvas-flow">
+                  <!-- Frame 1 -->
+                  <div class="canvas-frame">
+                    <div class="canvas-frame-label">1</div>
+                    <div class="canvas-element-static" style="top: 20%; left: 10%">Hello World</div>
+                  </div>
+
+                  <!-- Connection -->
+                  <div class="flow-connection">
+                    <div class="flow-line"></div>
+                    <div class="flow-badge">0.5s Ease-In</div>
+                    <div class="flow-line"></div>
+                  </div>
+
+                  <!-- Frame 2 -->
+                  <div class="canvas-frame">
+                    <div class="canvas-frame-label">2</div>
+                    <div class="canvas-element-static" style="top: 60%; left: 70%">Hello World</div>
+                  </div>
                 </div>
               </div>
 
-              <!-- Right Sidebar -->
+              <!-- Right Sidebar (Properties) -->
               <div class="editor-sidebar-right">
-                <div class="sidebar-header">Frames</div>
-                <div class="frames-list">
-                  <div class="frame-item active">
-                    <div class="frame-number">1</div>
-                    <div class="frame-item-content"></div>
-                  </div>
-                  <div class="frame-item">
-                    <div class="frame-number">2</div>
-                    <div class="frame-item-content"></div>
-                  </div>
-                  <div class="frame-item">
-                    <div class="frame-number">3</div>
-                    <div class="frame-item-content"></div>
-                  </div>
-                  <button class="add-frame-btn">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <line x1="12" y1="5" x2="12" y2="19"></line>
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                    </svg>
-                  </button>
+                <div class="sidebar-header">Interaction</div>
+
+                <div class="prop-group">
+                  <label class="prop-label">Duration</label>
+                  <div class="prop-input">0.5s</div>
+                </div>
+
+                <div class="prop-group">
+                  <label class="prop-label">Easing</label>
+                  <div class="prop-pill">Ease In</div>
+                </div>
+
+                <div class="prop-group">
+                  <label class="prop-label">Delay</label>
+                  <div class="prop-input">0ms</div>
                 </div>
               </div>
 
@@ -275,7 +280,6 @@
               <p class="pricing-desc">Perfect for trying frame-based motion</p>
             </div>
             <ul class="pricing-list">
-              <li class="pricing-item check">Create projects using Text, Shapes, and Media</li>
               <li class="pricing-item cross">Frame size is fixed after project creation</li>
               <li class="pricing-item check">Downloads in standard quality</li>
               <li class="pricing-item cross">Access to basic elements only</li>
@@ -440,7 +444,6 @@
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKE-LtseKdfioX1dflVAOLP95iW191ZS2dEARHXLysSfJ4tA/viewform?usp=dialog"
           class="footer-link">Join beta Waitlist</a>
       </nav>
-
       <!-- Copyright -->
       <div class="copyright">
         © <span id="currentYear"></span> Formerly. All rights reserved.
@@ -450,6 +453,5 @@
 
   <script src="script.js"></script>
 </body>
-
 
 </html>

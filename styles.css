@@ -131,6 +131,55 @@ p {
   animation: float 6s ease-in-out infinite;
 }
 
+@keyframes move-text {
+  0%, 20% {
+    top: 20%;
+    left: 10%;
+    transform: none;
+  }
+  80%, 100% {
+    top: 60%;
+    left: 70%;
+    transform: none;
+  }
+}
+
+.animate-move {
+  animation: move-text 3s ease-in-out infinite alternate;
+  position: absolute; /* Ensure it moves absolutely */
+}
+
+.frame-connection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.connection-line {
+  width: 2px;
+  height: 16px;
+  background-color: var(--primary);
+  opacity: 0.3;
+}
+
+.connection-badge {
+  font-size: 0.65rem;
+  padding: 0.2rem 0.5rem;
+  background-color: hsla(217, 91%, 60%, 0.1);
+  color: var(--primary);
+  border-radius: 99px;
+  font-weight: 600;
+  border: 1px solid hsla(217, 91%, 60%, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 /* ==========================================
    Buttons
    ========================================== */
@@ -985,6 +1034,7 @@ p {
    ========================================== */
 .what-you-can-create {
   padding: 5rem 0;
+  background-color: hsla(220, 14%, 96%, 0.5);
 }
 
 .create-grid {
@@ -1061,7 +1111,6 @@ p {
    ========================================== */
 .pricing {
   padding: 5rem 0;
-  background-color: hsla(220, 14%, 96%, 0.5);
 }
 
 .section-kicker {
@@ -1242,7 +1291,6 @@ p {
    ========================================== */
 .built-for-creators {
   padding: 5rem 0;
-  background-color: hsla(220, 14%, 96%, 0.5);
 }
 
 .creators-grid {
@@ -1445,6 +1493,14 @@ p {
   backdrop-filter: blur(2px);
 }
 
+.frame-preview-dot {
+  width: 20px;
+  height: 6px;
+  background-color: var(--primary);
+  border-radius: 2px;
+  position: absolute;
+}
+
 .add-frame-btn {
   display: flex;
   align-items: center;
@@ -1480,6 +1536,110 @@ p {
   z-index: 20;
 }
 
+/* Canvas Flow (Center) */
+.canvas-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.canvas-frame {
+  width: 200px;
+  aspect-ratio: 16 / 9;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  position: relative;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.canvas-frame-label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  background-color: hsla(0, 0%, 100%, 0.9);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  backdrop-filter: blur(2px);
+  z-index: 10;
+}
+
+.canvas-element-static {
+  position: absolute;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.flow-connection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+}
+
+.flow-line {
+  width: 40px;
+  height: 2px;
+  background-color: var(--primary);
+  opacity: 0.3;
+}
+
+.flow-badge {
+  font-size: 0.65rem;
+  padding: 0.25rem 0.6rem;
+  background-color: hsla(217, 91%, 60%, 0.1);
+  color: var(--primary);
+  border-radius: 99px;
+  font-weight: 600;
+  border: 1px solid hsla(217, 91%, 60%, 0.2);
+  white-space: nowrap;
+}
+
+/* Sidebar Properties */
+.prop-group {
+  margin-bottom: 1.5rem;
+}
+
+.prop-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.prop-input {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  color: var(--foreground);
+}
+
+.prop-pill {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background-color: hsla(217, 91%, 60%, 0.1);
+  color: var(--primary);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .editor-layout {
     flex-direction: column;
@@ -1512,5 +1672,56 @@ p {
   .frame-item {
     width: 120px;
     flex-shrink: 0;
+  }
+}
+
+/* ==========================================
+   Hero Visual Update
+   ========================================== */
+.hero-visual-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-visual-header {
+  padding: 1.25rem 1.5rem;
+  background-color: var(--card);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.visual-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.visual-subtitle {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin: 0;
+  font-weight: 500;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .hero-visual-header {
+    padding: 1.75rem 2rem;
+    text-align: left;
+  }
+
+  .visual-title {
+    font-size: 1.5rem;
+  }
+
+  .visual-subtitle {
+    font-size: 1rem;
   }
 }
